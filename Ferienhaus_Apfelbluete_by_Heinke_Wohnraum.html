@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bessere Abifahrt - Unterkunft Ferienhaus Apfelblüte by Heinke Wohnraum</title>
+
+    <link rel="stylesheet" href="accommodation_details_image_viewer.css">
+    <link rel="stylesheet" href="global_style.css">
+    <link rel="stylesheet" href="accommodation_details_style.css">
+</head>
+<body>
+<div id="content">
+    <h1 class="title">Ferienhaus Apfelblüte by Heinke Wohnraum</h1>
+    <div id="image-viewer">
+        <img id="main-image" src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/346273890.jpg?k=14261375253169a3e134482beddbd4282ef534bea5ef27151b21ada20fc6c593&o=&hp=1">
+        <div id="other-images"><img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/346273890.jpg?k=14261375253169a3e134482beddbd4282ef534bea5ef27151b21ada20fc6c593&o=&hp=1">
+<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/346273860.jpg?k=74f027984cbb340772de64e7466ccedd9be695198b2cc4fb58489b1f74f7cc20&o=&hp=1">
+<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/340097205.jpg?k=c963c7d17d3bf6ed994e78bc0aadef9a586ab186c7a915ef6f1300efe7e2d614&o=&hp=1">
+<img src="https://cf.bstatic.com/xdata/images/hotel/max1024x768/346273884.jpg?k=dfb32e6ed099a8076579ca32bb4ec446ed1d787a0a45a7911185536c3f1309dd&o=&hp=1">
+</div>
+    </div>
+    <div id="pricing-view">
+        <h1>Preis*</h1>
+        <table>
+            <tr><!--style="display: flex;justify-content: right"-->
+                <td class="pricingInfo">Total:</td>
+                <td class="totalPrice">3984€</td>
+            </tr>
+            <tr><!--style="display: flex"-->
+                <td class="pricingInfo">Pro Person (bei 13 Pers.):</td>
+                <td class="perPersonPricing">306€</td>
+            </tr>
+        </table>
+    </div>
+    <table class="location-table">
+        <tr>
+            <td class="location-header">Lage:</td>
+            <td>Deutschland, Baden-Württemberg in der Nähe vom Bodensee</td>
+        </tr>
+        <tr>
+            <td class="location-header">Addresse:</td>
+            <td><a href="https://www.google.com/maps/search/7 Azenbergstraße, 88677 Markdorf" target="_blank"
+                   rel="noopener noreferrer">7 Azenbergstraße, 88677 Markdorf</a></td>
+        </tr>
+    </table>
+    <table class="location-table">
+        <tr>
+            <td class="location-header">Anreisedauer:</td>
+            <td>3.5h</td>
+        </tr>
+        <tr>
+            <td class="location-header">Beschreibung:</td>
+            <td>Naja halt da lang und dann dort.</td>
+        </tr>
+    </table>
+    <div id="bed-info-header-div">
+        <p id="bed-info-header">Bettenverteilung:</p>
+        <p id="bed-info-header-info">(Nur Räume mit Betten aufgeführt)</p>
+    </div>
+    <table id="bed-info-table"><tr><td class="bed-header">Raum 1:</td><td>2x Doppelbett, 1x Einzelbett</td></tr>
+<tr><td class="bed-header">Raum 2:</td><td>1x Doppelbett</td></tr>
+<tr><td class="bed-header">Raum 3:</td><td>1x Doppelbett, 3x Einzelbett</td></tr>
+</table>
+    <p id="information-date">* Der Preis ist für den Zeitraum vom 3.6. - 7.6.2024 und auf dem Stand vom 15.4.2023.</p>
+    <p id="additional-information">Weitere Informationen auf <a href="https://www.booking.com/Share-dWOpjU" target="_blank"
+                                                                rel="noopener noreferrer">Booking.com</a>.</p>
+</div>
+
+<script>
+    const thumbnails = document.getElementById("other-images");
+    const imgs = thumbnails.getElementsByTagName("img");
+    const main = document.getElementById("main-image");
+
+    for (let i = 0; i < imgs.length; i++) {
+        let img = imgs[i];
+
+        img.addEventListener("click", function () {
+            main.src = this.src;
+        });
+    }
+</script>
+</body>
+</html>

@@ -1,0 +1,164 @@
+* {
+    font-family: sans-serif;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 30px;
+}
+
+#content {
+    width: 30cm;
+}
+
+#filter-div {
+    margin-bottom: 50px;
+}
+
+#filter-div table {
+    width: 100%;
+}
+
+#filter-div h2 {
+    margin-left: 50px;
+}
+
+.selection div {
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    padding: 7px 15px;
+    margin: 10px;
+    width: fit-content;
+    transition: all 0.5s ease;
+}
+
+.selection div:hover {
+    /*background-color: #888888;*/
+    /*color: #FFFFFF;*/
+    background-color: #CCCCCC;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+div.selected {
+    background-color: #888888;
+    color: #FFFFFF;
+}
+
+#country-filter {
+    width: 200px;
+    vertical-align: top;
+}
+
+#country-filter div {
+    margin: 10px auto 10px auto;
+}
+
+#region-filter {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#accommodations-div {
+    /*display: inline-block;*/
+}
+
+.accommodation-container {
+    margin: 10px 0;
+    border-width: 1px;
+    border-style: solid;
+    padding: 10px;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.accommodation-container:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.accommodation-info-div {
+    margin: 0 20px 0 20px;
+    padding: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.accommodation-name {
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.accommodation-location {
+    font-family: sans-serif;
+    color: #333333;
+    margin: 10px 0;
+}
+
+.accommodation-capacity {
+    font-family: sans-serif;
+    margin: 20px 0;
+}
+
+.accommodation-right-div {
+    margin-left: auto;
+    position: relative;
+}
+
+.accommodation-new-label-div {
+    background-color: lawngreen;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.accommodation-new-label {
+    margin: 0;
+    padding: 8px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.accommodation-pricing-table {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 10px 10px 0;
+    width: 350px;
+}
+
+.accommodation-totalPrice {
+    color: #555555;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: right;
+}
+
+.accommodation-perPersonPricing {
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: right;
+}
+
+.accommodation-pricingInfo {
+    color: #555555;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: right;
+    
+    white-space: nowrap;
+}

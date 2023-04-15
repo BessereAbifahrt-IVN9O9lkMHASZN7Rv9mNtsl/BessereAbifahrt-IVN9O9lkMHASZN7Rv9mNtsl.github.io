@@ -1,0 +1,78 @@
+<!DOCTYPE html>
+<html lang="de">
+<head>
+    <meta charset="UTF-8">
+    <title>Bessere Abifahrt - Unterkunft test1</title>
+
+    <link rel="stylesheet" href="accommodation_details_image_viewer.css">
+    <link rel="stylesheet" href="global_style.css">
+    <link rel="stylesheet" href="accommodation_details_style.css">
+</head>
+<body>
+<div id="content">
+    <h1 class="title">test1</h1>
+    <div id="image-viewer">
+        <img id="main-image" src="">
+        <div id="other-images"><img src="">
+</div>
+    </div>
+    <div id="pricing-view">
+        <h1>Preis*</h1>
+        <table>
+            <tr><!--style="display: flex;justify-content: right"-->
+                <td class="pricingInfo">Total:</td>
+                <td class="totalPrice">1000€</td>
+            </tr>
+            <tr><!--style="display: flex"-->
+                <td class="pricingInfo">Pro Person (bei 10 Pers.):</td>
+                <td class="perPersonPricing">100€</td>
+            </tr>
+        </table>
+    </div>
+    <table class="location-table">
+        <tr>
+            <td class="location-header">Lage:</td>
+            <td>Germany, Berlin </td>
+        </tr>
+        <tr>
+            <td class="location-header">Addresse:</td>
+            <td><a href="https://www.google.com/maps/search/" target="_blank"
+                   rel="noopener noreferrer"></a></td>
+        </tr>
+    </table>
+    <table class="location-table">
+        <tr>
+            <td class="location-header">Anreisedauer:</td>
+            <td>0h</td>
+        </tr>
+        <tr>
+            <td class="location-header">Beschreibung:</td>
+            <td></td>
+        </tr>
+    </table>
+    <div id="bed-info-header-div">
+        <p id="bed-info-header">Bettenverteilung:</p>
+        <p id="bed-info-header-info">(Nur Räume mit Betten aufgeführt)</p>
+    </div>
+    <table id="bed-info-table"><tr><td class="bed-header">Raum 1:</td><td></td></tr>
+</table>
+    <p id="information-date">* Der Preis ist für den Zeitraum vom  und auf dem Stand vom .</p>
+    <p id="additional-information">Weitere Informationen auf <a href="" target="_blank"
+                                                                rel="noopener noreferrer">Booking.com</a>.</p>
+</div>
+
+<script>
+    const thumbnails = document.getElementById("other-images");
+    const imgs = thumbnails.getElementsByTagName("img");
+    const main = document.getElementById("main-image");
+
+    for (let i = 0; i < imgs.length; i++) {
+        let img = imgs[i];
+
+        img.addEventListener("click", function () {
+            main.src = this.src;
+        });
+    }
+</script>
+</body>
+</html>
