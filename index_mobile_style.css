@@ -2,4 +2,8 @@
 #content {
     width: auto;
 }
+.accommodation-container:hover {
+    transform: initial;
+    cursor: initial;
+}
 /*}*/
