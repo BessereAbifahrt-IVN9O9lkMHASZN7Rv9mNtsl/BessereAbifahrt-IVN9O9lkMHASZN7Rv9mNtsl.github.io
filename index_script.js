@@ -64,7 +64,7 @@ let selected_countries = [];
 let selected_regions = [];
 let filter_new = false;
 
-accommodations = accommodations.sort((a, b) => a['Name'] > b['Name'] ? 1 : -1);
+accommodations = accommodations.sort((a, b) => a['Name'].localeCompare(b['Name']));
 
 generateContent();
 
@@ -152,7 +152,7 @@ function generateContent() {
         content.push([seen, presetCopy.replaceAll("PerPersonPrice", Math.round(data["TotalPrice"] / data["MaxPersonCount"]).toString())]);
     }
 
-    content.sort((a, b) => a[0] && !b[0] ? 1 : -1)
+    content = content.sort((a, b) => (a[0] && !b[0]) ? 1 : 0);
     document.getElementById("accommodations-div").innerHTML = content.map(value => value[1]).join('');
 
     const all = document.getElementsByClassName("accommodation-container");
