@@ -76,4 +76,25 @@
     .accommodation-perPersonPricing {
         font-size: 20px;
     }
+    
+    #filter-div {
+        margin-bottom: 0;
+    }
+    
+    .selection div {
+        background-color: #FFFFFF;
+        font-size: 12px;
+        padding: 5px 12px;
+        margin: 5px;
+    }
+
+    div.selected {
+        background-color: #888888;
+        color: #FFFFFF;
+    }
+    
+    #filter-div h2 {
+        margin: 0 0 0 10px;
+        font-size: 20px;
+    }
 }
