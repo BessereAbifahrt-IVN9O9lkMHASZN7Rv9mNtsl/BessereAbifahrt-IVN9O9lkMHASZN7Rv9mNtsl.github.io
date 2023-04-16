@@ -7,4 +7,74 @@
         transform: initial;
         cursor: initial;
     }
+    
+    .accommodation-container {
+        border-style: none;
+        background-color: #FFFFFF;
+        box-shadow: 0 0 10px 1px #666666;
+        position: relative;
+        padding-top: 35px;
+    }
+    
+    body {
+        background-color: #EEEEEE;
+    }
+
+    .accommodation-image {
+        width: 100px;
+        height: 100px;
+    }
+    
+    .accommodation-name {
+        position: absolute;
+        left: 0;
+        top: 0;
+        width: 100%;
+        margin: 7px 10px;
+        font-size: 15px;
+    }
+    
+    .accommodation-location {
+        font-size: 12px;
+        margin: 0;
+    }
+    
+    .accommodation-capacity {
+        font-size: 12px;
+        margin: 5px 0;
+    }
+    
+    .accommodation-new-label-div {
+        display: none;
+    }
+    
+    .accommodation-sub-container {
+        display: block;
+        height: 100px;
+        /*flex: 0;*/
+        overflow: hidden;
+        position: unset;
+    }
+    
+    .accommodation-info-div {
+        margin: 0 10px 0 10px;
+    }
+    
+    .accommodation-pricing-table {
+        position: relative;
+        padding: 0 5px 5px 0;
+        margin-left: auto;
+    }
+    
+    .accommodation-pricingInfo {
+        font-size: 10px;
+    }
+    
+    .accommodation-totalPrice {
+        font-size: 15px;
+    }
+    
+    .accommodation-perPersonPricing {
+        font-size: 20px;
+    }
 }

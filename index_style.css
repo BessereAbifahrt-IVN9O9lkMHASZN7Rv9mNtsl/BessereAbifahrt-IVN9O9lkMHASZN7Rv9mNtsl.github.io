@@ -83,6 +83,17 @@ div.selected {
     cursor: pointer;
 }
 
+.accommodation-sub-container {
+    display: flex;
+    position: relative;
+    flex: 1;
+}
+
+.accommodation-image {
+    width: 200px;
+    height: 200px;
+}
+
 .accommodation-info-div {
     margin: 0 20px 0 20px;
     padding: 0;
@@ -111,12 +122,10 @@ div.selected {
     margin: 20px 0;
 }
 
-.accommodation-right-div {
-    margin-left: auto;
-    position: relative;
-}
-
 .accommodation-new-label-div {
+    position: absolute;
+    top: 0;
+    right: 0;
     background-color: lawngreen;
     border-radius: 20px;
     height: fit-content;
@@ -136,7 +145,6 @@ div.selected {
     bottom: 0;
     right: 0;
     padding: 0 10px 10px 0;
-    width: 350px;
 }
 
 .accommodation-totalPrice {
@@ -152,6 +160,7 @@ div.selected {
     font-weight: bold;
     font-family: sans-serif;
     text-align: right;
+    padding-left: 10px;
 }
 
 .accommodation-pricingInfo {
