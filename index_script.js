@@ -161,7 +161,7 @@ function generateContent() {
     }
 
     content = content.sort(cmp);
-    document.getElementById("accommodations-div").innerHTML = content.map(value => value[1]).join('');
+    document.getElementById("accommodations-div").innerHTML = content.join('');//.map(value => value[1])
 
     const all = document.getElementsByClassName("accommodation-container");
     for (let e of all) {
