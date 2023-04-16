@@ -1,9 +1,10 @@
-/*@media only screen and (max-width: 480px) {*/
-#content {
-    width: auto;
+@media only screen and (max-width: 480px) {
+    #content {
+        width: auto;
+    }
+
+    .accommodation-container:hover {
+        transform: initial;
+        cursor: initial;
+    }
 }
-.accommodation-container:hover {
-    transform: initial;
-    cursor: initial;
-}
-/*}*/
