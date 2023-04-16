@@ -30,7 +30,7 @@
 
 #other-selection {
     display: flex;
-    overflow: scroll;
+    /*overflow: scroll;*/
     padding-bottom: 5px;
 }
 
