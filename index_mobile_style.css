@@ -45,7 +45,13 @@
     }
     
     .accommodation-new-label-div {
-        display: none;
+        top: 5px;
+        right: 5px;
+    }
+    
+    .accommodation-new-label {
+        font-size: 12px;
+        padding: 6px 8px;
     }
     
     .accommodation-sub-container {
@@ -79,6 +85,7 @@
     
     #filter-div {
         margin-bottom: 0;
+        margin-left: 10px;
     }
     
     .selection div {
@@ -88,13 +95,35 @@
         margin: 5px;
     }
 
+    .selection div:hover {
+        background-color: #FFFFFF;
+        transform: initial;
+        cursor: initial;
+    }
+    
+    .selection div.selected:hover {
+        background-color: #888888;
+    }
+
     div.selected {
         background-color: #888888;
         color: #FFFFFF;
     }
     
     #filter-div h2 {
-        margin: 0 0 0 10px;
-        font-size: 20px;
+        margin: 10px 0 0 0;
+        font-size: 15px;
+    }
+    
+    #other-selection {
+        margin-left: 0;
+    }
+    
+    #country-filter {
+        width: fit-content;
+    }
+
+    #country-filter div {
+        margin: 10px 0 10px 0;
     }
 }

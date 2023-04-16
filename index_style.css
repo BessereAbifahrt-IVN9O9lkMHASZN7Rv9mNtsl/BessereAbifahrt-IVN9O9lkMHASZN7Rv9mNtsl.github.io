@@ -44,8 +44,6 @@
 }
 
 .selection div:hover {
-    /*background-color: #888888;*/
-    /*color: #FFFFFF;*/
     background-color: #CCCCCC;
     transform: scale(1.05);
     cursor: pointer;
