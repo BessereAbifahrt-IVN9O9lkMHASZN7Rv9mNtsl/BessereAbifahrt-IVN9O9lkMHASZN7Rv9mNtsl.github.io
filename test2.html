@@ -2,11 +2,13 @@
 <html lang="de">
 <head>
     <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1"/>
     <title>Bessere Abifahrt - Unterkunft test2</title>
 
     <link rel="stylesheet" href="accommodation_details_image_viewer.css">
     <link rel="stylesheet" href="global_style.css">
     <link rel="stylesheet" href="accommodation_details_style.css">
+    <link rel="stylesheet" href="accommodation_details_mobile_style.css">
 </head>
 <body>
 <div id="content">
@@ -29,39 +31,43 @@
             </tr>
         </table>
     </div>
-    <table class="location-table">
-        <tr>
-            <td class="location-header">Lage:</td>
-            <td>Germany, Dresden </td>
-        </tr>
-        <tr>
-            <td class="location-header">Addresse:</td>
-            <td><a href="https://www.google.com/maps/search/" target="_blank"
-                   rel="noopener noreferrer"></a></td>
-        </tr>
-    </table>
-    <table class="location-table">
-        <tr>
-            <td class="location-header">Anreisedauer:</td>
-            <td>0h</td>
-        </tr>
-        <tr>
-            <td class="location-header">Beschreibung:</td>
-            <td></td>
-        </tr>
-    </table>
-    <table class="location-table">
-        <tr>
-            <td class="location-header">Max Pers. Zahl:</td>
-            <td>15</td>
-        </tr>
-    </table>
-    <div id="bed-info-header-div">
-        <p id="bed-info-header">Bettenverteilung:</p>
-        <p id="bed-info-header-info">(Nur Räume mit Betten aufgeführt)</p>
+    <div id="location-info">
+        <table class="location-table" id="table1">
+            <tr>
+                <td class="location-header">Lage:</td>
+                <td>Germany, Dresden </td>
+            </tr>
+            <tr>
+                <td class="location-header">Addresse:</td>
+                <td><a href="https://www.google.com/maps/search/" target="_blank"
+                       rel="noopener noreferrer"></a></td>
+            </tr>
+        </table>
+        <table class="location-table" id="table2">
+            <tr>
+                <td class="location-header">Anreisedauer:</td>
+                <td>0h</td>
+            </tr>
+            <tr>
+                <td class="location-header">Beschreibung:</td>
+                <td></td>
+            </tr>
+        </table>
     </div>
-    <table id="bed-info-table"><tr><td class="bed-header">Raum 1:</td><td></td></tr>
+    <div id="PersonInfo">
+        <table class="location-table">
+            <tr>
+                <td class="location-header">Max Pers. Zahl:</td>
+                <td>15</td>
+            </tr>
+        </table>
+        <div id="bed-info-header-div">
+            <p id="bed-info-header">Bettenverteilung:</p>
+            <p id="bed-info-header-info">(Nur Räume mit Betten aufgeführt)</p>
+        </div>
+        <table id="bed-info-table"><tr><td class="bed-header">Raum 1:</td><td></td></tr>
 </table>
+    </div>
     <p id="information-date">* Der Preis ist für den Zeitraum vom  und auf dem Stand vom .</p>
     <p id="additional-information">Weitere Informationen auf <a href="" target="_blank"
                                                                 rel="noopener noreferrer">Booking.com</a>.</p>

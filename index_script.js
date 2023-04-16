@@ -31,7 +31,7 @@ let accommodations = [{
     {
       "SingleBeds": 3,
       "DoubleBeds": 1,
-      "SofaBeds": 0
+      "SofaBeds": 1
     }
   ],
   "TimeSpan": "3.6. - 7.6.2024",
