@@ -2,6 +2,14 @@
     #content {
         width: auto;
     }
+    
+    .title {
+        font-size: 25px;
+    }
+    
+    .subtitle {
+        font-size: 15px;
+    }
 
     .accommodation-container:hover {
         transform: initial;
@@ -14,6 +22,7 @@
         box-shadow: 0 0 10px 1px #666666;
         position: relative;
         padding-top: 35px;
+        overflow: hidden;
     }
     
     body {
@@ -29,7 +38,6 @@
         position: absolute;
         left: 0;
         top: 0;
-        width: 100%;
         margin: 7px 10px;
         font-size: 15px;
     }
@@ -110,9 +118,21 @@
         color: #FFFFFF;
     }
     
+    #filter-div h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+    
     #filter-div h2 {
-        margin: 10px 0 0 0;
+        margin: 0;
         font-size: 15px;
+    }
+    
+    #filter-div table th {
+        font-weight: normal;
+        font-size: 12px;
+        text-align: left;
+        padding-left: 20px;
     }
     
     #other-selection {
@@ -120,10 +140,10 @@
     }
     
     #country-filter {
-        width: fit-content;
+        width: 110px;
     }
 
     #country-filter div {
-        margin: 10px 0 10px 0;
+        margin-left: 0;
     }
 }
