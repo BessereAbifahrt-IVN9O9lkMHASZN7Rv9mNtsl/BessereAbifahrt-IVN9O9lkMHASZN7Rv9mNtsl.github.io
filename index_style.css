@@ -14,7 +14,6 @@
 
 #content {
     width: 30cm;
-    margin: 0 10px;
 }
 
 #filter-div {
@@ -71,7 +70,7 @@ div.selected {
 }
 
 .accommodation-container {
-    margin: 10px 0;
+    margin: 10px 10px;
     border-width: 1px;
     border-style: solid;
     padding: 10px;
