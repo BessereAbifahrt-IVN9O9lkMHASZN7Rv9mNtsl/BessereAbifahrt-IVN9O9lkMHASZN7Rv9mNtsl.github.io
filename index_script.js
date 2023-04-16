@@ -113,7 +113,7 @@ new_filter.addEventListener("click", function () {
 
 function updateRegionSelection() {
     for (let regionFilterOption of region_filter_options) {
-        if (selected_countries.length === 0 || selected_countries.includes(regionFilterOption.className))
+        if (selected_countries.length === 0 || selected_countries.some(value => regionFilterOption.className.includes(value)))
             regionFilterOption.style.display = 'block';
         else {
             regionFilterOption.style.display = 'none';
