@@ -152,7 +152,7 @@ function generateContent() {
         content.push([seen, presetCopy.replaceAll("PerPersonPrice", Math.round(data["TotalPrice"] / data["MaxPersonCount"]).toString())]);
     }
 
-    content = content.sort((a, b) => (a[0] && !b[0]) ? 1 : 0);
+    content = content.sort((a, b) => (a[0] && !b[0]) ? 1 : -1);
     document.getElementById("accommodations-div").innerHTML = content.map(value => value[1]).join('');
 
     const all = document.getElementsByClassName("accommodation-container");
