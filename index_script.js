@@ -34,11 +34,11 @@ let accommodations = [{
     "https://cf.bstatic.com/xdata/images/hotel/max1024x768/340097205.jpg?k=c963c7d17d3bf6ed994e78bc0aadef9a586ab186c7a915ef6f1300efe7e2d614&o=&hp=1",
     "https://cf.bstatic.com/xdata/images/hotel/max1024x768/346273884.jpg?k=dfb32e6ed099a8076579ca32bb4ec446ed1d787a0a45a7911185536c3f1309dd&o=&hp=1"
   ],
-  "Pro": [
+  "ProArguments": [
     "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et",
     "b"
   ],
-  "Contra": [
+  "ContraArguments": [
     "c",
     "d"
   ],
@@ -195,33 +195,36 @@ function generateContent() {
         e.addEventListener("click", click);
         let time;
         let moved = false;
-        let lastX = 0;
-        let lastY = 0;
+        let startX = 0;
+        let startY = 0;
+        let deltaX = 0;
+        let deltaY = 0;
         e.addEventListener("touchstart", evt => {
             time = evt.timeStamp;
             const obj = evt.changedTouches[0];
-            lastX = parseInt(obj.clientX);
-            lastY = parseInt(obj.clientY);
+            startX = parseInt(obj.clientX);
+            startY = parseInt(obj.clientY);
             moved = false;
         });
         e.addEventListener("touchmove", evt => {
             const obj = evt.changedTouches[0];
-            const deltaX = parseInt(obj.clientX) - lastX;
-            const deltaY = parseInt(obj.clientY) - lastY;
+            deltaX = parseInt(obj.clientX) - startX;
+            deltaY = parseInt(obj.clientY) - startY;
             if (Math.abs(deltaX) > Math.abs(deltaY) || moved) {
-                e.style.backgroundColor = "#FF0000";
                 evt.preventDefault();
                 moved = true;
-                e.style.left = deltaX + 'px';
+                e.style.left = Math.min(deltaX, 0) + 'px';
             }
         });
         e.addEventListener("touchend", evt => {
-            e.style.backgroundColor = "#FFFFFF";
             evt.preventDefault();
             if (evt.timeStamp - time <= 500 && !moved)
                 click();
-            else{
+            else {
                 e.style.left = '0';
+                if(moved && deltaX < 10){
+                    click();
+                }
             }
         });
     }
