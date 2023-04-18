@@ -174,7 +174,7 @@ function generateContent() {
 
     const all = document.getElementsByClassName("accommodation-container");
     for (let e of all) {
-        const f = () => {
+        const click = () => {
             const safe_name = SafeName(e.getElementsByClassName("accommodation-name")[0].innerHTML);
 
             const accommodations_seen = getCookie('AccommodationsSeen');
@@ -192,7 +192,7 @@ function generateContent() {
             e.getElementsByClassName("accommodation-new-label-div")[0].style.display = 'none';
             window.open(safe_name + '.html', '_blank').focus()
         };
-        e.addEventListener("click", f);
+        e.addEventListener("click", click);
         let time;
         let moved = false;
         let lastX = 0;
@@ -202,23 +202,27 @@ function generateContent() {
             const obj = evt.changedTouches[0];
             lastX = parseInt(obj.clientX);
             lastY = parseInt(obj.clientY);
+            moved = false;
         });
         e.addEventListener("touchmove", evt => {
             const obj = evt.changedTouches[0];
             const deltaX = parseInt(obj.clientX) - lastX;
             const deltaY = parseInt(obj.clientY) - lastY;
-            console.log(deltaX);
-            if (Math.abs(deltaX) > Math.abs(deltaY)) {
+            if (Math.abs(deltaX) > Math.abs(deltaY) || moved) {
                 e.style.backgroundColor = "#FF0000";
                 evt.preventDefault();
                 moved = true;
+                e.style.left = deltaX + 'px';
             }
         });
         e.addEventListener("touchend", evt => {
             e.style.backgroundColor = "#FFFFFF";
             evt.preventDefault();
             if (evt.timeStamp - time <= 500 && !moved)
-                f();
+                click();
+            else{
+                e.style.left = '0';
+            }
         });
     }
 }

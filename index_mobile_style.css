@@ -23,6 +23,7 @@
         position: relative;
         padding-top: 35px;
         overflow: hidden;
+        transition: unset;
     }
     
     body {
