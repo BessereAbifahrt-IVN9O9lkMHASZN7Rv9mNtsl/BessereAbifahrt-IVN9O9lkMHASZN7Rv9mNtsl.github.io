@@ -160,11 +160,11 @@ function generateContent() {
 
         content.push([seen, presetCopy.replaceAll("PerPersonPrice", Math.round(data["TotalPrice"] / data["MaxPersonCount"]).toString())]);
     }
-    
+
     function cmp(a, b) {
-        if(a[0] && !b[0])
+        if (a[0] && !b[0])
             return 1;
-        if(!a[0] && b[0])
+        if (!a[0] && b[0])
             return -1;
         else return 0;
     }
@@ -174,7 +174,7 @@ function generateContent() {
 
     const all = document.getElementsByClassName("accommodation-container");
     for (let e of all) {
-        e.addEventListener("click", function () {
+        const f = function () {
             const safe_name = SafeName(e.getElementsByClassName("accommodation-name")[0].innerHTML);
 
             const accommodations_seen = getCookie('AccommodationsSeen');
@@ -191,6 +191,15 @@ function generateContent() {
 
             e.getElementsByClassName("accommodation-new-label-div")[0].style.display = 'none';
             window.open(safe_name + '.html', '_blank').focus()
+        };
+        e.addEventListener("click", f);
+        e.addEventListener("touchmove", evt => {
+            e.style.backgroundColor = "#FF0000";
+            evt.preventDefault();
+        });
+        e.addEventListener("touchend", evt => {
+            e.style.backgroundColor = "#FFFFFF";
+           evt.preventDefault(); 
         });
     }
 }
