@@ -49,9 +49,21 @@
         margin: 0;
     }
     
+    .accommodation-surrounding-tags {
+        margin: 5px 5px;
+    }
+
+    .accommodation-surrounding-tags div {
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        margin: 0 3px;
+    }
+    
     .accommodation-capacity {
         font-size: 12px;
-        margin: 10px 0;
+        margin: 5px 0;
     }
     
     .accommodation-new-label-div {

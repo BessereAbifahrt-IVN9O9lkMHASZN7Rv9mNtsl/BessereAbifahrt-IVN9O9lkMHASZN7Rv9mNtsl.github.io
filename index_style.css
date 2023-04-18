@@ -120,6 +120,13 @@ div.selected {
     margin: 10px 0;
 }
 
+.accommodation-surrounding-tags {
+    display: flex;
+}
+
+.accommodation-surrounding-tags div {
+}
+
 .accommodation-capacity {
     font-family: sans-serif;
     margin: 20px 0;

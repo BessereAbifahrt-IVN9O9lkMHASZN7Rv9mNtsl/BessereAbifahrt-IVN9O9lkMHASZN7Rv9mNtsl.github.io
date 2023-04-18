@@ -1,6 +1,11 @@
 let accommodations = [{
   "Name": "Ferienhaus Apfelblüte by Heinke Wohnraum",
   "Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "SurroundingTags": [
+    "Wald",
+    "Fluss",
+    "Rot"
+  ],
   "Country": "Deutschland",
   "Region": "Baden-Württemberg",
   "AdditionalLocationInformation": "in der Nähe vom Bodensee",
@@ -67,7 +72,13 @@ let accommodations = [{
 ,
 ];
 
-const preset = "<div class=\"accommodation-container\">     <img class=\"accommodation-image\" src=\"SmallImageLink\">     <div class=\"accommodation-sub-container\">         <div class=\"accommodation-info-div\">             <p class=\"accommodation-name\">Name</p>             <p class=\"accommodation-location\">Country, Region AdditionalLocationInformation</p>             <p class=\"accommodation-capacity\">MaxPersonCount Personen</p>         </div>         <div class=\"accommodation-new-label-div\">             <p class=\"accommodation-new-label\">NEU</p>         </div>         <table class=\"accommodation-pricing-table\">             <tr>                 <td class=\"accommodation-pricingInfo\">Total:</td>                 <td class=\"accommodation-totalPrice\">TotalPrice€</td>             </tr>             <tr>                 <td class=\"accommodation-pricingInfo\">Pro Person (bei MaxPersonCount Pers.):</td>                 <td class=\"accommodation-perPersonPricing\">PerPersonPrice€</td>             </tr>         </table>     </div> </div>";
+const preset = "<div class=\"accommodation-container\">     <img class=\"accommodation-image\" src=\"SmallImageLink\">     <div class=\"accommodation-sub-container\">         <div class=\"accommodation-info-div\">             <p class=\"accommodation-name\">Name</p>             <p class=\"accommodation-location\">Country, Region AdditionalLocationInformation</p>             <div class=\"accommodation-surrounding-tags\">%Tags%</div>             <p class=\"accommodation-capacity\">MaxPersonCount Personen</p>         </div>         <div class=\"accommodation-new-label-div\">             <p class=\"accommodation-new-label\">NEU</p>         </div>         <table class=\"accommodation-pricing-table\">             <tr>                 <td class=\"accommodation-pricingInfo\">Total:</td>                 <td class=\"accommodation-totalPrice\">TotalPrice€</td>             </tr>             <tr>                 <td class=\"accommodation-pricingInfo\">Pro Person (bei MaxPersonCount Pers.):</td>                 <td class=\"accommodation-perPersonPricing\">PerPersonPrice€</td>             </tr>         </table>     </div> </div>";
+
+const tag_colors = {
+    "Wald": "#00FF00",
+    "Fluss": "#0000FF",
+    "Rot": "#FF0000"
+}
 
 let selected_countries = [];
 let selected_regions = [];
@@ -156,7 +167,15 @@ function generateContent() {
         }
         if (seen)
             presetCopy = presetCopy.replaceAll('<div class="accommodation-new-label-div">',
-                '<div class="accommodation-new-label-div" style="display: none">')
+                '<div class="accommodation-new-label-div" style="display: none">');
+
+        let tags = '';
+        for (let i in data['SurroundingTags']) {
+            let tag = data['SurroundingTags'][i];
+            tags += `<div style="background-color: ${tag_colors[tag]}">${tag}</div>`;
+        }
+
+        presetCopy = presetCopy.replaceAll('%Tags%', tags);
 
         content.push([seen, presetCopy.replaceAll("PerPersonPrice", Math.round(data["TotalPrice"] / data["MaxPersonCount"]).toString())]);
     }
@@ -222,7 +241,7 @@ function generateContent() {
                 click();
             else {
                 e.style.left = '0';
-                if(moved && deltaX < 10){
+                if (moved && deltaX < 10) {
                     click();
                 }
             }
