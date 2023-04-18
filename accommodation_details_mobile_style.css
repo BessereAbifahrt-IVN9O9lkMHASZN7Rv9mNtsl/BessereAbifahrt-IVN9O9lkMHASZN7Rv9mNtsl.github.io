@@ -2,7 +2,7 @@
     body {
         background-color: #EEEEEE;
     }
-    
+
     #content {
         width: auto;
         border-style: none;
@@ -17,48 +17,54 @@
     #image-viewer {
         margin: 10px 0;
     }
-    
+
     #pricing-view {
         background-color: #DDDDDD;
         margin: 0;
         padding: 5px 10px;
         border-radius: 0;
     }
-    
+
     #pricing-view h1 {
         font-size: 20px;
     }
-    
+
     .perPersonPricing {
         font-size: 20px;
     }
-    
+
     .totalPrice {
         font-size: 15px;
     }
-    
+
     .pricingInfo {
         font-size: 12px;
     }
-    
+
+    #description-div {
+        background-color: #FFFFFF;
+        margin: 10px 0;
+        font-size: 12px;
+    }
+
     #location-info {
         background-color: #FFFFFF;
         margin: 10px 0;
     }
-    
+
     .location-table {
         padding: 10px;
         margin: 0;
     }
-    
+
     #table1 {
         padding-bottom: 5px;
     }
-    
+
     #table2 {
         padding-top: 5px;
     }
-    
+
     .location-table td {
         font-size: 12px;
     }
@@ -67,47 +73,74 @@
         font-size: 15px;
         width: 120px;
     }
-    
+
     #PersonInfo {
         background-color: #FFFFFF;
     }
-    
+
     #PersonInfo .location-table td {
         font-size: 13px;
     }
-    
+
     #PersonInfo .location-table td.location-header {
         font-size: 14px;
     }
-    
+
     #bed-info-header-div {
         display: block;
         margin: 0 10px;
     }
-    
+
     #bed-info-header {
         font-size: 15px;
     }
-    
+
     #bed-info-header-info {
         font-size: 10px;
         margin: 0;
     }
-    
+
     #bed-info-table {
         margin: 0 10px;
         padding-bottom: 10px;
     }
-    
+
     #bed-info-table td {
         font-size: 12px;
     }
+
+    #ProContra-table {
+        background-color: #FFFFFF;
+        margin: 10px 0;
+        padding: 0;
+        width: 100%;
+    }
     
+    #ProContra-table th {
+        font-size: 15px;
+    }
+    
+    #ProContra-table td {
+        font-size: 12px;
+        text-align: center;
+        padding: 10px;
+    }
+    
+    #pro-header {
+        width: 50%;
+        color: #00FF00;
+    }
+    
+    #contra-header {
+        width: 50%;
+        color: #FF0000;
+    }
+
     #bed-info-table td.bed-header {
         font-size: 15px;
         width: 70px;
     }
-    
+
     #information-date {
         font-size: 12px;
         margin: 20px 20px;

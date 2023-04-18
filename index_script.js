@@ -1,15 +1,6 @@
 let accommodations = [{
-  "Name": "test1",
-  "Country": "Germany",
-  "Region": "Berlin",
-  "AdditionalLocationInformation": "",
-  "SmallImageLink": "https://cf.bstatic.com/xdata/images/hotel/square200/346273890.webp?k=31cfcf34684b3a8e63c1a40afab3fbc4852ebef6fdac2543a61d851696317275&o=&s=1",
-  "MaxPersonCount": 10,
-  "TotalPrice": 1000
-}
-,
-{
   "Name": "Ferienhaus Apfelblüte by Heinke Wohnraum",
+  "Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
   "Country": "Deutschland",
   "Region": "Baden-Württemberg",
   "AdditionalLocationInformation": "in der Nähe vom Bodensee",
@@ -43,9 +34,27 @@ let accommodations = [{
     "https://cf.bstatic.com/xdata/images/hotel/max1024x768/340097205.jpg?k=c963c7d17d3bf6ed994e78bc0aadef9a586ab186c7a915ef6f1300efe7e2d614&o=&hp=1",
     "https://cf.bstatic.com/xdata/images/hotel/max1024x768/346273884.jpg?k=dfb32e6ed099a8076579ca32bb4ec446ed1d787a0a45a7911185536c3f1309dd&o=&hp=1"
   ],
+  "Pro": [
+    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et",
+    "b"
+  ],
+  "Contra": [
+    "c",
+    "d"
+  ],
   "InformationDate": "15.4.2023",
   "BookingComLink": "https://www.booking.com/Share-dWOpjU"
 },
+{
+  "Name": "test1",
+  "Country": "Germany",
+  "Region": "Berlin",
+  "AdditionalLocationInformation": "",
+  "SmallImageLink": "https://cf.bstatic.com/xdata/images/hotel/square200/346273890.webp?k=31cfcf34684b3a8e63c1a40afab3fbc4852ebef6fdac2543a61d851696317275&o=&s=1",
+  "MaxPersonCount": 10,
+  "TotalPrice": 1000
+}
+,
 {
   "Name": "test2",
   "Country": "Germany",

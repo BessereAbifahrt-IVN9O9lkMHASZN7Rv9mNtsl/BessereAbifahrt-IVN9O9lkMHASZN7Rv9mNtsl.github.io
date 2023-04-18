@@ -68,6 +68,11 @@ body {
     font-family: sans-serif;
 }
 
+#description-div {
+    padding: 10px;
+    text-align: justify;
+}
+
 .location-table td {
     vertical-align: center;
 }
