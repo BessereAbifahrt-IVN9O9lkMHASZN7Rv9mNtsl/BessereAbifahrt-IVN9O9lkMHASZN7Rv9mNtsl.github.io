@@ -174,7 +174,7 @@ function generateContent() {
 
     const all = document.getElementsByClassName("accommodation-container");
     for (let e of all) {
-        const f = function () {
+        const f = () => {
             const safe_name = SafeName(e.getElementsByClassName("accommodation-name")[0].innerHTML);
 
             const accommodations_seen = getCookie('AccommodationsSeen');
@@ -193,13 +193,19 @@ function generateContent() {
             window.open(safe_name + '.html', '_blank').focus()
         };
         e.addEventListener("click", f);
+        let time;
+        e.addEventListener("touchstart", evt => {
+            time = evt.timeStamp;
+        });
         e.addEventListener("touchmove", evt => {
             e.style.backgroundColor = "#FF0000";
             evt.preventDefault();
         });
         e.addEventListener("touchend", evt => {
             e.style.backgroundColor = "#FFFFFF";
-           evt.preventDefault(); 
+            evt.preventDefault();
+            if (evt.timeStamp - time <= 500)
+                f();
         });
     }
 }
