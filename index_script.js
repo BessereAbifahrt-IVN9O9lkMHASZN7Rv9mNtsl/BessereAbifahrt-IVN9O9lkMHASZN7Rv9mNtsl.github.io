@@ -204,7 +204,7 @@ function generateContent() {
         e.addEventListener("touchend", evt => {
             e.style.backgroundColor = "#FFFFFF";
             evt.preventDefault();
-            if (evt.timeStamp - time <= 500)
+            if (evt.timeStamp - time <= 2000)
                 f();
         });
     }
