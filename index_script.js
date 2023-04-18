@@ -194,17 +194,28 @@ function generateContent() {
         };
         e.addEventListener("click", f);
         let time;
+        let moved = false;
+        let lastX = 0;
+        let lastY = 0;
         e.addEventListener("touchstart", evt => {
             time = evt.timeStamp;
+            const obj = evt.changedTouches[0];
+            lastX = parseInt(obj.clientX);
+            lastY = parseInt(obj.clientY);
         });
         e.addEventListener("touchmove", evt => {
-            e.style.backgroundColor = "#FF0000";
+            const obj = evt.changedTouches[0];
+            const deltaX = parseInt(obj.clientX) - lastX;
+            const deltaY = parseInt(obj.clientY) - lastY;
+            if (deltaX > deltaY)
+                e.style.backgroundColor = "#FF0000";
             evt.preventDefault();
+            moved = true;
         });
         e.addEventListener("touchend", evt => {
             e.style.backgroundColor = "#FFFFFF";
             evt.preventDefault();
-            if (evt.timeStamp - time <= 2000)
+            if (evt.timeStamp - time <= 500 && !moved)
                 f();
         });
     }
