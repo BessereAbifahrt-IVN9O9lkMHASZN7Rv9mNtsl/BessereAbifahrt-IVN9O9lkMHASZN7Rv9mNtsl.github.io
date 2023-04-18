@@ -207,10 +207,12 @@ function generateContent() {
             const obj = evt.changedTouches[0];
             const deltaX = parseInt(obj.clientX) - lastX;
             const deltaY = parseInt(obj.clientY) - lastY;
-            if (deltaX > deltaY)
+            console.log(deltaX);
+            if (Math.abs(deltaX) > Math.abs(deltaY)) {
                 e.style.backgroundColor = "#FF0000";
-            evt.preventDefault();
-            moved = true;
+                evt.preventDefault();
+                moved = true;
+            }
         });
         e.addEventListener("touchend", evt => {
             e.style.backgroundColor = "#FFFFFF";
