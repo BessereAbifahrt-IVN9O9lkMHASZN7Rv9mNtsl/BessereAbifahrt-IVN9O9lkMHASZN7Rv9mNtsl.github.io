@@ -272,7 +272,7 @@ function generateContent() {
                 click();
             else {
                 e.style.left = '0';
-                if (moved && deltaX < 10) {
+                if (moved && deltaX < 100) {
                     click();
                 }
             }
