@@ -2,16 +2,17 @@ const thumbnails = document.getElementById("other-images");
 const imgs = thumbnails.getElementsByTagName("img");
 const main = document.getElementById("main-image");
 
-let current_image = 0;
+let current_image = -1;
 
 for (let i = 0; i < imgs.length; i++) {
     let img = imgs[i];
 
     img.addEventListener("click", function () {
-        main.src = this.src;
-        current_image = i;
+        set_main_image(i);
     });
 }
+
+set_main_image(0);
 
 let time;
 let moved = false;
@@ -33,18 +34,34 @@ main.addEventListener("touchmove", evt => {
     if (Math.abs(deltaX) > Math.abs(deltaY) || moved) {
         evt.preventDefault();
         moved = true;
-        main.style.left = deltaX + 'px';
+        if (current_image <= 0)
+            main.style.left = Math.max(-10, Math.min(deltaX, 0)) + 'px';
+        else if (current_image >= imgs.length - 1)
+            main.style.left = Math.max(0, Math.min(deltaX, 10)) + 'px';
+        else
+            main.style.left = Math.max(-10, Math.min(deltaX, 10)) + 'px';
     }
 });
 main.addEventListener("touchend", evt => {
     evt.preventDefault();
     main.style.left = '0';
-    if (moved && deltaX < -100 && current_image < imgs.length - 1) {
-        current_image++;
-        main.src = imgs[current_image].src;
+    if (moved && deltaX < -10 && current_image < imgs.length - 1) {
+        set_main_image(current_image + 1);
     }
-    if (moved && deltaX > 100 && current_image > 0) {
-        current_image--;
-        main.src = imgs[current_image].src;
+    if (moved && deltaX > 10 && current_image > 0) {
+        set_main_image(current_image - 1);
     }
 });
+
+function set_main_image(i) {
+    main.src = imgs[i].src;
+    imgs[i].style.marginBottom = '10px';
+    imgs[i].style.marginTop = '0';
+    imgs[i].style.transform = 'scale(1.05)';
+    if(current_image >= 0) {
+        imgs[current_image].style.marginTop = '5px';
+        imgs[current_image].style.marginBottom = '5px';
+        imgs[current_image].style.transform = 'unset';
+    }
+    current_image = i;
+}
