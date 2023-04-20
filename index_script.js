@@ -257,6 +257,7 @@ function generateContent() {
             startX = parseInt(obj.clientX);
             startY = parseInt(obj.clientY);
             movedX = false;
+            movedY = false;
         });
         e.addEventListener("touchmove", evt => {
             const obj = evt.changedTouches[0];
