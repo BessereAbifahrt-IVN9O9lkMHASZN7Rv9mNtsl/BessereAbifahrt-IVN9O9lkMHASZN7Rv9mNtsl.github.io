@@ -174,9 +174,11 @@ function generateContent() {
     for (let data of accommodations) {
 
         if (selected_countries.length > 0 && !selected_countries.includes(data['Country'])
-            || selected_regions.length > 0 && !selected_regions.includes(data['Region'])) continue;
+            || selected_regions.length > 0 && !selected_regions.includes(data['Region'])
+            || selected_surrounding_tags.length > 0 && !selected_surrounding_tags.every(e => data['SurroundingTags'].includes(e)))
+            continue;
 
-        if (selected_surrounding_tags.length > 0) {
+        /*if (selected_surrounding_tags.length > 0) {
             let found = false;
             for (let tag of data['SurroundingTags']) {
                 if (selected_surrounding_tags.includes(tag)) {
@@ -185,7 +187,7 @@ function generateContent() {
                 }
             }
             if (!found) continue;
-        }
+        }*/
 
         const accommodations_seen = getCookie('AccommodationsSeen');
         const seen = accommodations_seen.split(',').includes(SafeName(data['Name']));
@@ -267,7 +269,7 @@ function generateContent() {
                 evt.preventDefault();
                 movedX = true;
                 e.style.left = Math.min(deltaX, 0) + 'px';
-            } else if(Math.abs(deltaY) > 100){
+            } else if (Math.abs(deltaY) > 100) {
                 movedY = true;
             }
         });

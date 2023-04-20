@@ -160,4 +160,8 @@
     #country-filter div {
         margin-left: 0;
     }
+    
+    #surrounding-selection {
+        margin-bottom: 5px;
+    }
 }
