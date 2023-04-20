@@ -28,6 +28,10 @@
     margin-left: 50px;
 }
 
+#surrounding-selection {
+    display: flex;
+}
+
 #other-selection {
     display: flex;
     /*overflow: scroll;*/

@@ -3,8 +3,7 @@ let accommodations = [{
   "Description": "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
   "SurroundingTags": [
     "Wald",
-    "Fluss",
-    "Rot"
+    "Fluss"
   ],
   "Country": "Deutschland",
   "Region": "Baden-Württemberg",
@@ -52,6 +51,9 @@ let accommodations = [{
 },
 {
   "Name": "test1",
+  "SurroundingTags": [
+    "Rot"
+  ],
   "Country": "Germany",
   "Region": "Berlin",
   "AdditionalLocationInformation": "",
@@ -62,6 +64,9 @@ let accommodations = [{
 ,
 {
   "Name": "test2",
+  "SurroundingTags": [
+    "Fluss"
+  ],
   "Country": "Germany",
   "Region": "Dresden",
   "AdditionalLocationInformation": "",
@@ -75,13 +80,14 @@ let accommodations = [{
 const preset = "<div class=\"accommodation-container\">     <img class=\"accommodation-image\" src=\"SmallImageLink\">     <div class=\"accommodation-sub-container\">         <div class=\"accommodation-info-div\">             <p class=\"accommodation-name\">Name</p>             <p class=\"accommodation-location\">Country, Region AdditionalLocationInformation</p>             <div class=\"accommodation-surrounding-tags\">%Tags%</div>             <p class=\"accommodation-capacity\">MaxPersonCount Personen</p>         </div>         <div class=\"accommodation-new-label-div\">             <p class=\"accommodation-new-label\">NEU</p>         </div>         <table class=\"accommodation-pricing-table\">             <tr>                 <td class=\"accommodation-pricingInfo\">Total:</td>                 <td class=\"accommodation-totalPrice\">TotalPrice€</td>             </tr>             <tr>                 <td class=\"accommodation-pricingInfo\">Pro Person (bei MaxPersonCount Pers.):</td>                 <td class=\"accommodation-perPersonPricing\">PerPersonPrice€</td>             </tr>         </table>     </div> </div>";
 
 const tag_colors = {
-    "Wald": "#00FF00",
-    "Fluss": "#0000FF",
-    "Rot": "#FF0000"
-}
+  "Wald": "#55FF55",
+  "Fluss": "#5555FF",
+  "Rot": "#FF5555"
+};
 
 let selected_countries = [];
 let selected_regions = [];
+let selected_surrounding_tags = [];
 let filter_new = false;
 
 accommodations = accommodations.sort((a, b) => a['Name'].localeCompare(b['Name']));
@@ -103,7 +109,6 @@ for (let option of country_filter_options) {
 }
 
 const region_filter_options = document.getElementById('region-filter').children;
-
 for (let regionFilterOption of region_filter_options) {
     regionFilterOption.addEventListener("click", function () {
         if (regionFilterOption.className.includes('selected')) {
@@ -112,6 +117,21 @@ for (let regionFilterOption of region_filter_options) {
         } else {
             regionFilterOption.className += ' selected';
             selected_regions.push(regionFilterOption.innerHTML);
+        }
+
+        generateContent();
+    });
+}
+
+const surrounding_filter_options = document.getElementById('surrounding-selection').children;
+for (let surroundingFilterOption of surrounding_filter_options) {
+    surroundingFilterOption.addEventListener('click', () => {
+        if (surroundingFilterOption.className.includes('selected')) {
+            surroundingFilterOption.className = surroundingFilterOption.className.replaceAll('selected', '');
+            selected_surrounding_tags.splice(selected_surrounding_tags.indexOf(surroundingFilterOption.innerHTML), 1);
+        } else {
+            surroundingFilterOption.className += ' selected';
+            selected_surrounding_tags.push(surroundingFilterOption.innerHTML);
         }
 
         generateContent();
@@ -155,6 +175,17 @@ function generateContent() {
 
         if (selected_countries.length > 0 && !selected_countries.includes(data['Country'])
             || selected_regions.length > 0 && !selected_regions.includes(data['Region'])) continue;
+
+        if (selected_surrounding_tags.length > 0) {
+            let found = false;
+            for (let tag of data['SurroundingTags']) {
+                if (selected_surrounding_tags.includes(tag)) {
+                    found = true;
+                    break;
+                }
+            }
+            if (!found) continue;
+        }
 
         const accommodations_seen = getCookie('AccommodationsSeen');
         const seen = accommodations_seen.split(',').includes(SafeName(data['Name']));
