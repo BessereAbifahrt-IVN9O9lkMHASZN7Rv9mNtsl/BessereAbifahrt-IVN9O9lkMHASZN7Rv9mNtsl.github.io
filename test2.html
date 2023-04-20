@@ -84,18 +84,6 @@
                                                                 rel="noopener noreferrer">Booking.com</a>.</p>
 </div>
 
-<script>
-    const thumbnails = document.getElementById("other-images");
-    const imgs = thumbnails.getElementsByTagName("img");
-    const main = document.getElementById("main-image");
-
-    for (let i = 0; i < imgs.length; i++) {
-        let img = imgs[i];
-
-        img.addEventListener("click", function () {
-            main.src = this.src;
-        });
-    }
-</script>
+<script src="accommodation_details_script.js"></script>
 </body>
 </html>

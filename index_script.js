@@ -223,6 +223,7 @@ function generateContent() {
     document.getElementById("accommodations-div").innerHTML = content.map(value => value[1]).join('');
 
     const all = document.getElementsByClassName("accommodation-container");
+    // swipe
     for (let e of all) {
         const click = () => {
             const safe_name = SafeName(e.getElementsByClassName("accommodation-name")[0].innerHTML);
@@ -272,7 +273,7 @@ function generateContent() {
                 click();
             else {
                 e.style.left = '0';
-                if (moved && deltaX < 100) {
+                if (moved && deltaX < -100) {
                     click();
                 }
             }
