@@ -30,7 +30,9 @@
     height: 400px;
     object-fit: cover;
     display: block;
+    position: relative;
     margin: 20px auto;
+    transition: unset;
 }
 
 .hidden {
