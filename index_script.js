@@ -267,7 +267,7 @@ function generateContent() {
                 evt.preventDefault();
                 movedX = true;
                 e.style.left = Math.min(deltaX, 0) + 'px';
-            } else if(Math.abs(deltaY) > 10){
+            } else if(Math.abs(deltaY) > 100){
                 movedY = true;
             }
         });
