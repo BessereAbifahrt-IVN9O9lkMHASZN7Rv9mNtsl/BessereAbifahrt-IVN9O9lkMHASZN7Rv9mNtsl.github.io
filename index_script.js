@@ -245,7 +245,8 @@ function generateContent() {
         };
         e.addEventListener("click", click);
         let time;
-        let moved = false;
+        let movedX = false;
+        let movedY = false;
         let startX = 0;
         let startY = 0;
         let deltaX = 0;
@@ -255,25 +256,27 @@ function generateContent() {
             const obj = evt.changedTouches[0];
             startX = parseInt(obj.clientX);
             startY = parseInt(obj.clientY);
-            moved = false;
+            movedX = false;
         });
         e.addEventListener("touchmove", evt => {
             const obj = evt.changedTouches[0];
             deltaX = parseInt(obj.clientX) - startX;
             deltaY = parseInt(obj.clientY) - startY;
-            if (Math.abs(deltaX) > Math.abs(deltaY) || moved) {
+            if (Math.abs(deltaX) > Math.abs(deltaY) || movedX) {
                 evt.preventDefault();
-                moved = true;
+                movedX = true;
                 e.style.left = Math.min(deltaX, 0) + 'px';
+            } else if(Math.abs(deltaY) > 10){
+                movedY = true;
             }
         });
         e.addEventListener("touchend", evt => {
             evt.preventDefault();
-            if (evt.timeStamp - time <= 500 && !moved)
+            if (evt.timeStamp - time <= 500 && !movedX && !movedY)
                 click();
             else {
                 e.style.left = '0';
-                if (moved && deltaX < -100) {
+                if (movedX && deltaX < -100) {
                     click();
                 }
             }
