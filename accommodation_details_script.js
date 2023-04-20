@@ -58,7 +58,7 @@ function set_main_image(i) {
     imgs[i].style.marginBottom = '10px';
     imgs[i].style.marginTop = '0';
     imgs[i].style.transform = 'scale(1.05)';
-    if(current_image >= 0) {
+    if (current_image >= 0) {
         imgs[current_image].style.marginTop = '5px';
         imgs[current_image].style.marginBottom = '5px';
         imgs[current_image].style.transform = 'unset';
