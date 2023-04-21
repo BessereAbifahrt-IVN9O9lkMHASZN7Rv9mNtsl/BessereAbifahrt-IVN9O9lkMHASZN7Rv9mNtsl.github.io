@@ -199,3 +199,17 @@ div.selected {
 
     white-space: nowrap;
 }
+
+#surrounding-selection div {
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    box-shadow: unset;
+    color: #000000;
+}
+
+#surrounding-selection div.selected {
+    border-color: #000000;
+    box-shadow: 0 0 10px 2px #666666;
+    color: #000000;
+}

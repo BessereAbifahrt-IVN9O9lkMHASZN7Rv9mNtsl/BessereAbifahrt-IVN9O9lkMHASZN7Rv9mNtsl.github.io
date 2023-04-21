@@ -1,3 +1,7 @@
+* {
+    font-family: sans-serif;
+}
+
 body {
     position: absolute;
     height: 100%;
@@ -71,6 +75,7 @@ body {
 #description-div {
     padding: 10px;
     text-align: justify;
+    margin: 0 40px;
 }
 
 .location-table td {
@@ -122,4 +127,24 @@ body {
     width: 100px;
     height: 30px;
     font-size: 20px;
+}
+
+#pro-header {
+    width: 50%;
+    color: #00DD00;
+}
+
+#contra-header {
+    width: 50%;
+    color: #DD0000;
+}
+
+#ProContra-table {
+    padding: 20px 50px;
+    width: 100%;
+}
+
+#ProContra-table td {
+    text-align: center;
+    padding: 10px;
 }
