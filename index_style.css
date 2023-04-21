@@ -2,6 +2,10 @@
     font-family: sans-serif;
 }
 
+body {
+    background-color: #EEEEEE;
+}
+
 .title {
     text-align: center;
     font-size: 50px;
@@ -17,7 +21,10 @@
 }
 
 #filter-div {
-    margin-bottom: 50px;
+    margin: 10px 10px 50px 10px;
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 10px;
 }
 
 #filter-div table {
@@ -25,7 +32,11 @@
 }
 
 #filter-div h2 {
-    margin-left: 50px;
+    margin: 20px 0 0 40px;
+}
+
+#filter-div h2#\#first-filter {
+    margin-top: 10px;
 }
 
 #surrounding-selection {
@@ -35,14 +46,13 @@
 #other-selection {
     display: flex;
     /*overflow: scroll;*/
-    padding-bottom: 5px;
 }
 
 .selection div {
     background-color: #EEEEEE;
     border-radius: 20px;
     padding: 7px 15px;
-    margin: 10px;
+    margin: 10px 5px;
     width: fit-content;
     transition: all 0.5s ease;
 }
@@ -77,9 +87,9 @@ div.selected {
 }
 
 .accommodation-container {
-    margin: 10px 10px;
-    border-width: 1px;
-    border-style: solid;
+    margin: 15px 10px;
+    box-shadow: 0 0 10px 2px #666666;
+    background-color: #FFFFFF;
     padding: 10px;
     display: flex;
     transition: all 0.5s ease;
@@ -129,11 +139,15 @@ div.selected {
 }
 
 .accommodation-surrounding-tags div {
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 0 7px 0 5px;
 }
 
 .accommodation-capacity {
     font-family: sans-serif;
-    margin: 20px 0;
+    margin: 15px 0;
 }
 
 .accommodation-new-label-div {

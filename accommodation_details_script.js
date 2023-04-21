@@ -55,13 +55,9 @@ main.addEventListener("touchend", evt => {
 
 function set_main_image(i) {
     main.src = imgs[i].src;
-    imgs[i].style.marginBottom = '10px';
-    imgs[i].style.marginTop = '0';
-    imgs[i].style.transform = 'scale(1.05)';
+    imgs[i].className += ' selected';
     if (current_image >= 0) {
-        imgs[current_image].style.marginTop = '5px';
-        imgs[current_image].style.marginBottom = '5px';
-        imgs[current_image].style.transform = 'unset';
+        imgs[current_image].className = imgs[current_image].className.replaceAll('selected', '');
     }
     current_image = i;
 }
