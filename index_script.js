@@ -178,17 +178,6 @@ function generateContent() {
             || selected_surrounding_tags.length > 0 && !selected_surrounding_tags.every(e => data['SurroundingTags'].includes(e)))
             continue;
 
-        /*if (selected_surrounding_tags.length > 0) {
-            let found = false;
-            for (let tag of data['SurroundingTags']) {
-                if (selected_surrounding_tags.includes(tag)) {
-                    found = true;
-                    break;
-                }
-            }
-            if (!found) continue;
-        }*/
-
         const accommodations_seen = getCookie('AccommodationsSeen');
         const seen = accommodations_seen.split(',').includes(SafeName(data['Name']));
 
