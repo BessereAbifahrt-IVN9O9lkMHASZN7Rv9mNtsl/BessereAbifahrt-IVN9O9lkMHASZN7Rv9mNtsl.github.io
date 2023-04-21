@@ -40,9 +40,9 @@ main.addEventListener("touchmove", evt => {
             max = 0;
         else if (current_image >= imgs.length - 1)
             min = 0;
-        if (deltaX > max + 1)
+        if (deltaX > max + 2)
             startX = obj.clientX - max + 1;
-        if (deltaX < min - 1)
+        if (deltaX < min - 2)
             startX = obj.clientX - min - 1;
         main.style.left = Math.max(min, Math.min(deltaX, max)) + 'px';
     }

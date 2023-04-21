@@ -257,6 +257,8 @@ function generateContent() {
             if (Math.abs(deltaX) > Math.abs(deltaY) || movedX) {
                 evt.preventDefault();
                 movedX = true;
+                if (deltaX > 2)
+                    startX = obj.clientX - 1;
                 e.style.left = Math.min(deltaX, 0) + 'px';
             } else if (Math.abs(deltaY) > 100) {
                 movedY = true;
