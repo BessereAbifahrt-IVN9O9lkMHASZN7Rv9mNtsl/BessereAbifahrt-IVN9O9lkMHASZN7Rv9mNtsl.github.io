@@ -34,21 +34,26 @@ main.addEventListener("touchmove", evt => {
     if (Math.abs(deltaX) > Math.abs(deltaY) || moved) {
         evt.preventDefault();
         moved = true;
+        let max = 10;
+        let min = -10;
         if (current_image <= 0)
-            main.style.left = Math.max(-10, Math.min(deltaX, 0)) + 'px';
+            max = 0;
         else if (current_image >= imgs.length - 1)
-            main.style.left = Math.max(0, Math.min(deltaX, 10)) + 'px';
-        else
-            main.style.left = Math.max(-10, Math.min(deltaX, 10)) + 'px';
+            min = 0;
+        if (deltaX > max)
+            startX = obj.clientX - max;
+        if (deltaX < min)
+            startX = obj.clientX - min;
+        main.style.left = Math.max(min, Math.min(deltaX, max)) + 'px';
     }
 });
 main.addEventListener("touchend", evt => {
     evt.preventDefault();
     main.style.left = '0';
-    if (moved && deltaX < -10 && current_image < imgs.length - 1) {
+    if (moved && deltaX <= -8 && current_image < imgs.length - 1) {
         set_main_image(current_image + 1);
     }
-    if (moved && deltaX > 10 && current_image > 0) {
+    if (moved && deltaX >= 8 && current_image > 0) {
         set_main_image(current_image - 1);
     }
 });
