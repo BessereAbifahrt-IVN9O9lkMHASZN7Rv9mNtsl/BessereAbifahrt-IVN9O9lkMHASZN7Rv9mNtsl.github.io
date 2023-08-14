@@ -3,23 +3,28 @@ document.getElementById("content").classList.remove("hidden");
 document.getElementById("java-script-disabled-warning").classList.add("hidden");
 
 let accommodations = [{
-  "Name": "Ferienhaus Apfelblüte by Heinke Wohnraum",
-  "Description": "Das ist die Beschreibung! Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
+  "Name": "Seepark Auenhain",
+  "Description": "Die Unterkunft liegt sehr nahe am See und Strand und bietet Wassersport Möglichkeiten. Die Unterkunft ist aber in einer Siedlung gelegen und nur knapp stündlich mit einem Bus erreichbar. Einkaufsmöglichkeiten, sowie Möglichkeiten zum Essen gibt es in der Nähe nicht. Die Unterkunft besteht aus mehreren Häusern und bei unserer Gruppengröße müssten wir 2 Häuser nehmen. Daher ist die Bettenverteilung eine Zusammenfassung beider Häuser.",
   "SurroundingTags": [
-    "Wald",
-    "Fluss"
+    "See",
+    "Siedlung"
   ],
   "Country": "Deutschland",
-  "Region": "Baden-Württemberg",
-  "AdditionalLocationInformation": "in der Nähe vom Bodensee",
-  "Address": "7 Azenbergstraße, 88677 Markdorf",
-  "TravelTime": 3.5,
-  "TravelDescription": "Naja halt da lang und dann dort.",
-  "MaxPersonCount": 13,
+  "Region": "Sachsen",
+  "AdditionalLocationInformation": "in der Nähe von Leipzig",
+  "Address": "Am Feriendorf 2, 04416 Markkleeberg, Deutschland",
+  "TravelTime": 2.5,
+  "TravelDescription": "Mit dem ICE bis Leipzig (1.5h) und von dort mit der S Bahn und einem Bus (je ca 15 min).",
+  "MaxPersonCount": 10,
   "Rooms": [
     {
-      "SingleBeds": 1,
-      "DoubleBeds": 2,
+      "SingleBeds": 2,
+      "DoubleBeds": 0,
+      "SofaBeds": 0
+    },
+    {
+      "SingleBeds": 2,
+      "DoubleBeds": 0,
       "SofaBeds": 0
     },
     {
@@ -28,57 +33,114 @@ let accommodations = [{
       "SofaBeds": 0
     },
     {
-      "SingleBeds": 3,
+      "SingleBeds": 0,
       "DoubleBeds": 1,
+      "SofaBeds": 0
+    },
+    {
+      "SingleBeds": 0,
+      "DoubleBeds": 1,
+      "SofaBeds": 0
+    },
+    {
+      "SingleBeds": 0,
+      "DoubleBeds": 0,
+      "SofaBeds": 1
+    },
+    {
+      "SingleBeds": 0,
+      "DoubleBeds": 0,
       "SofaBeds": 1
     }
   ],
-  "TimeSpan": "3.6. - 7.6.2024",
-  "TotalPrice": 3984,
-  "SmallImageLink": "https://cf.bstatic.com/xdata/images/hotel/square200/346273890.webp?k=31cfcf34684b3a8e63c1a40afab3fbc4852ebef6fdac2543a61d851696317275&o=&s=1",
+  "TimeSpan": "08.07. - 14.07.2024",
+  "TotalPrice": 2678,
+  "SmallImageLink": "https://cf.bstatic.com/xdata/images/hotel/square200/74488497.webp?k=6a9f4721e2407be9a6ec8fc0ee1d4e51a8aabd24736d4ac975314c1a5fcb0543&o=",
   "Images": [
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/346273890.jpg?k=14261375253169a3e134482beddbd4282ef534bea5ef27151b21ada20fc6c593&o=&hp=1",
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/346273860.jpg?k=74f027984cbb340772de64e7466ccedd9be695198b2cc4fb58489b1f74f7cc20&o=&hp=1",
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/340097205.jpg?k=c963c7d17d3bf6ed994e78bc0aadef9a586ab186c7a915ef6f1300efe7e2d614&o=&hp=1",
-    "https://cf.bstatic.com/xdata/images/hotel/max1024x768/346273884.jpg?k=dfb32e6ed099a8076579ca32bb4ec446ed1d787a0a45a7911185536c3f1309dd&o=&hp=1"
+    "https://cf.bstatic.com/images/hotel/max1024x768/189/189423865.jpg",
+    "https://cf.bstatic.com/images/hotel/max1024x768/411/41152939.jpg",
+    "https://cf.bstatic.com/images/hotel/max1024x768/411/41152946.jpg",
+    "https://cf.bstatic.com/images/hotel/max1024x768/411/41152945.jpg",
+    "https://cf.bstatic.com/images/hotel/max1024x768/910/91098143.jpg",
+    "https://cf.bstatic.com/images/hotel/max1024x768/411/41152950.jpg",
+    "https://cf.bstatic.com/images/hotel/max1024x768/139/139543383.jpg",
+    "https://cf.bstatic.com/images/hotel/max1024x768/911/91128572.jpg"
   ],
   "ProArguments": [
-    "Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et",
-    "b"
+    "Bieten Frühstück an, was sehr gut sein soll",
+    "Insgesamt 4 Badezimmer",
+    "Nahe am Strand",
+    "Wassersport Möglichkeiten"
   ],
   "ContraArguments": [
-    "c",
-    "d"
+    "Unterbringung in 2 voneinander getrenten Häusern",
+    "Sehr abgelegen",
+    "Keine Einkaufs-/Essmöglichkeiten in der Gegend",
+    "Anbindung nur mit einem stündlich fahrenden Bus"
   ],
-  "InformationDate": "15.4.2023",
-  "BookingComLink": "https://www.booking.com/Share-dWOpjU"
+  "InformationDate": "14.08.2023",  
+  "BookingComLink": "https://www.booking.com/Share-a2eL9Ox"
 },
 {
-  "Name": "test1",
+  "Name": "Parkside Boutique Appartements",
+  "Description": "Die Unterkunft liegt im historischen Teil von Herbolzheim und in der Nähe des Marktplatzes. Herbolzheim ist eine Kleinstadt, die aber eine ausreichende Anbindung mit dem Regio hat. In der Nähe befindet sich unter anderem der Europapark, der mit einem Bus in ca. 30 min zu erreichen ist und eine größere Golfanlage.",
   "SurroundingTags": [
-    "Rot"
+    "Kleinstadt"
   ],
-  "Country": "Germany",
-  "Region": "Berlin",
+  "Country": "Deutschland",
+  "Region": "Baden-Württemberg",
   "AdditionalLocationInformation": "",
-  "SmallImageLink": "https://cf.bstatic.com/xdata/images/hotel/square200/346273890.webp?k=31cfcf34684b3a8e63c1a40afab3fbc4852ebef6fdac2543a61d851696317275&o=&s=1",
+  "Address": "Hauptstraße 41, 79336 Herbolzheim, Deutschland",
+  "TravelTime": 7,
+  "TravelDescription": "Mit dem ICE nach Baden-Baden (6h) und von dort mit einem Regio (1h).",
   "MaxPersonCount": 10,
-  "TotalPrice": 1000
-}
-,
-{
-  "Name": "test2",
-  "SurroundingTags": [
-    "Fluss"
+  "Rooms": [
+    {
+      "SingleBeds": 0,
+      "DoubleBeds": 1,
+      "SofaBeds": 0
+    },
+    {
+      "SingleBeds": 0,
+      "DoubleBeds": 1,
+      "SofaBeds": 0
+    },
+    {
+      "SingleBeds": 0,
+      "DoubleBeds": 1,
+      "SofaBeds": 0
+    },
+    {
+      "SingleBeds": 0,
+      "DoubleBeds": 1,
+      "SofaBeds": 0
+    },
+    {
+      "SingleBeds": 0,
+      "DoubleBeds": 0,
+      "SofaBeds": 1
+    }
   ],
-  "Country": "Germany",
-  "Region": "Dresden",
-  "AdditionalLocationInformation": "",
-  "SmallImageLink": "https://cf.bstatic.com/xdata/images/hotel/square200/153806432.webp?k=055aadf3fea1e5f932b69bcea59c55b53ceb8bb7fea3d20f87607bd981823272&o=&s=1",
-  "MaxPersonCount": 15,
-  "TotalPrice": 2000
-}
-,
+  "TimeSpan": "07.07. - 13.07.2024",
+  "TotalPrice": 2084,
+  "SmallImageLink": "https://cf.bstatic.com/xdata/images/hotel/square200/153806432.webp?k=6b5d84aad8e9928dbc385c6139c1287c94343c97ef5c5a5553c70a72a058fa58&o=",
+  "Images": [
+    "https://cf.bstatic.com/images/hotel/max1024x768/155/155476297.jpg",
+    "https://cf.bstatic.com/images/hotel/max1024x768/155/155476292.jpg",
+    "https://cf.bstatic.com/images/hotel/max1024x768/155/155476281.jpg",
+    "https://cf.bstatic.com/images/hotel/max1024x768/155/155472543.jpg"
+  ],
+  "ProArguments": [
+    "In der Nähe des Europaparks (Pro, wenn man da hin möchte)",
+    "Es ist ein zusammenhängendes Apartment (es gibt daher nicht mehrere komplett voneinander getrente Zimmer)"
+  ],
+  "ContraArguments": [
+    "Nur ein Bad",
+    "Relativ abgelegen und in der Umgebung überwiegend Felder"
+  ],
+  "InformationDate": "14.08.2023",
+  "BookingComLink": "https://www.booking.com/Share-XR3MIQ"
+},
 ];
 
 const preset = "<div class=\"accommodation-container\">     <img class=\"accommodation-image\" src=\"SmallImageLink\">     <div class=\"accommodation-sub-container\">         <div class=\"accommodation-info-div\">             <p class=\"accommodation-name\">Name</p>             <p class=\"accommodation-location\">Country, Region AdditionalLocationInformation</p>             <div class=\"accommodation-surrounding-tags\">%Tags%</div>             <p class=\"accommodation-capacity\">MaxPersonCount Personen</p>         </div>         <div class=\"accommodation-new-label-div\">             <p class=\"accommodation-new-label\">NEU</p>         </div>         <table class=\"accommodation-pricing-table\">             <tr>                 <td class=\"accommodation-pricingInfo\">Total:</td>                 <td class=\"accommodation-totalPrice\">TotalPrice€</td>             </tr>             <tr>                 <td class=\"accommodation-pricingInfo\">Pro Person (bei MaxPersonCount Pers.):</td>                 <td class=\"accommodation-perPersonPricing\">PerPersonPrice€</td>             </tr>         </table>     </div> </div>";
@@ -86,7 +148,9 @@ const preset = "<div class=\"accommodation-container\">     <img class=\"accommo
 const tag_colors = {
   "Wald": "#55FF55",
   "Fluss": "#5555FF",
-  "Rot": "#FF5555"
+  "See": "#999999",
+  "Kleinstadt": "#999999",
+  "Siedlung": "#999999"
 };
 
 let selected_countries = [];
