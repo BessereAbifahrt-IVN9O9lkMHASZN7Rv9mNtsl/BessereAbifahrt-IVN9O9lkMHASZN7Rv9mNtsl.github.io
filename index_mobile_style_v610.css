@@ -1,0 +1,181 @@
+@media only screen and (max-width: 480px) {
+    #content {
+        width: auto;
+        overflow-x: hidden;
+    }
+
+    .title {
+        font-size: 25px;
+    }
+
+    .subtitle {
+        font-size: 15px;
+    }
+
+    .accommodation-container:hover {
+        transform: initial;
+        cursor: initial;
+    }
+
+    .accommodation-container {
+        margin: 10px 10px;
+        box-shadow: 0 0 10px 1px #666666;
+        position: relative;
+        padding-top: 35px;
+        overflow: hidden;
+        transition: unset;
+    }
+
+    .accommodation-image {
+        width: 100px;
+        height: 100px;
+    }
+
+    .accommodation-name {
+        position: absolute;
+        left: 0;
+        top: 0;
+        margin: 7px 10px;
+        font-size: 15px;
+    }
+
+    .accommodation-location {
+        font-size: 12px;
+        margin: 0;
+    }
+
+    .accommodation-surrounding-tags {
+        margin: 5px 0;
+    }
+
+    .accommodation-surrounding-tags div {
+        font-size: 0;
+        width: 10px;
+        height: 10px;
+        border-radius: 100%;
+        margin: 0 3px;
+        padding: 0;
+    }
+
+    .accommodation-capacity {
+        font-size: 12px;
+        margin: 7px 0;
+    }
+
+    .accommodation-new-label-div {
+        top: 5px;
+        right: 5px;
+    }
+
+    .accommodation-new-label {
+        font-size: 12px;
+        padding: 6px 8px;
+    }
+
+    .accommodation-sub-container {
+        display: block;
+        height: 100px;
+        /*flex: 0;*/
+        overflow: hidden;
+        position: unset;
+    }
+
+    .accommodation-info-div {
+        margin: 0 10px 0 10px;
+    }
+
+    .accommodation-pricing-table {
+        padding: 0 5px 5px 0;
+        margin: 10px;
+    }
+
+    .accommodation-pricingInfo {
+        font-size: 10px;
+    }
+
+    .accommodation-totalPrice {
+        font-size: 15px;
+    }
+
+    .accommodation-perPersonPricing {
+        font-size: 20px;
+    }
+
+    #filter-div {
+        margin: 10px 10px 0 10px;
+        background-color: unset;
+        padding: 0;
+        border-radius: 0;
+    }
+
+    .selection div {
+        background-color: #FFFFFF;
+        font-size: 12px;
+        padding: 5px 12px;
+        margin: 5px;
+    }
+
+    .selection div:hover {
+        background-color: #FFFFFF;
+        transform: initial;
+        cursor: initial;
+    }
+
+    .selection div.selected:hover {
+        background-color: #888888;
+    }
+
+    div.selected {
+        background-color: #888888;
+        color: #FFFFFF;
+    }
+
+    #filter-div {
+        margin-bottom: 15px;
+    }
+
+    #filter-div h1 {
+        font-size: 20px;
+        text-align: center;
+    }
+
+    #filter-div h2 {
+        margin: 0;
+        font-size: 15px;
+    }
+
+    #filter-div table th {
+        font-weight: normal;
+        font-size: 12px;
+        text-align: left;
+        padding-left: 20px;
+    }
+
+    #other-selection {
+        margin-left: 0;
+    }
+
+    #country-filter {
+        width: 110px;
+    }
+
+    #country-filter div {
+        margin-left: 0;
+    }
+
+    #surrounding-selection {
+        margin-bottom: 5px;
+    }
+
+    .warning {
+        margin: 50px 20px 0 20px;
+    }
+
+    .warning h1 {
+        font-size: 25px;
+    }
+
+    .warning p {
+        font-size: 12px;
+    }
+}
