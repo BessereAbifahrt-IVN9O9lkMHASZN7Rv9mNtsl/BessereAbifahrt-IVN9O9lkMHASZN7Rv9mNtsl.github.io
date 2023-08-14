@@ -1,0 +1,221 @@
+* {
+    font-family: sans-serif;
+}
+
+body {
+    background-color: #EEEEEE;
+}
+
+.title {
+    text-align: center;
+    font-size: 50px;
+}
+
+.subtitle {
+    text-align: center;
+    font-size: 30px;
+}
+
+#content {
+    width: 30cm;
+}
+
+#filter-div {
+    margin: 10px 10px 50px 10px;
+    background-color: #FFFFFF;
+    padding: 10px 20px;
+    border-radius: 10px;
+}
+
+#filter-div table {
+    width: 100%;
+}
+
+#filter-div h2 {
+    margin: 20px 0 0 40px;
+}
+
+#filter-div h2#\#first-filter {
+    margin-top: 10px;
+}
+
+#surrounding-selection {
+    display: flex;
+}
+
+#other-selection {
+    display: flex;
+    /*overflow: scroll;*/
+}
+
+.selection div {
+    background-color: #EEEEEE;
+    border-radius: 20px;
+    padding: 7px 15px;
+    margin: 10px 5px;
+    width: fit-content;
+    transition: all 0.5s ease;
+}
+
+.selection div:hover {
+    background-color: #CCCCCC;
+    transform: scale(1.05);
+    cursor: pointer;
+}
+
+div.selected {
+    background-color: #888888;
+    color: #FFFFFF;
+}
+
+#country-filter {
+    width: 200px;
+    vertical-align: top;
+}
+
+#country-filter div {
+    margin: 10px auto 10px auto;
+}
+
+#region-filter {
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;
+}
+
+#accommodations-div {
+}
+
+.accommodation-container {
+    margin: 15px 10px;
+    box-shadow: 0 0 10px 2px #666666;
+    background-color: #FFFFFF;
+    padding: 10px;
+    display: flex;
+    transition: all 0.5s ease;
+}
+
+.accommodation-container:hover {
+    transform: scale(1.02);
+    cursor: pointer;
+}
+
+.accommodation-sub-container {
+    display: flex;
+    position: relative;
+    flex: 1;
+}
+
+.accommodation-image {
+    width: 200px;
+    height: 200px;
+}
+
+.accommodation-info-div {
+    margin: 0 20px 0 20px;
+    padding: 0;
+
+    white-space: nowrap;
+    overflow: hidden;
+}
+
+.accommodation-name {
+    margin: 0;
+    text-decoration: none;
+    color: black;
+    font-size: 30px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.accommodation-location {
+    font-family: sans-serif;
+    color: #333333;
+    margin: 10px 0;
+}
+
+.accommodation-surrounding-tags {
+    display: flex;
+}
+
+.accommodation-surrounding-tags div {
+    font-size: 12px;
+    border-radius: 20px;
+    padding: 5px 10px;
+    margin: 0 7px 0 5px;
+}
+
+.accommodation-capacity {
+    font-family: sans-serif;
+    margin: 15px 0;
+}
+
+.accommodation-new-label-div {
+    position: absolute;
+    top: 0;
+    right: 0;
+    background-color: lawngreen;
+    border-radius: 20px;
+    height: fit-content;
+}
+
+.accommodation-new-label {
+    margin: 0;
+    padding: 8px;
+    color: black;
+    font-size: 16px;
+    font-weight: bold;
+    font-family: sans-serif;
+}
+
+.accommodation-pricing-table {
+    position: absolute;
+    bottom: 0;
+    right: 0;
+    padding: 0 10px 10px 0;
+}
+
+.accommodation-totalPrice {
+    color: #555555;
+    font-size: 20px;
+    font-family: sans-serif;
+    text-align: right;
+}
+
+.accommodation-perPersonPricing {
+    color: black;
+    font-size: 35px;
+    font-weight: bold;
+    font-family: sans-serif;
+    text-align: right;
+    padding-left: 10px;
+}
+
+.accommodation-pricingInfo {
+    color: #555555;
+    font-size: 16px;
+    font-family: sans-serif;
+    text-align: right;
+
+    white-space: nowrap;
+}
+
+#surrounding-selection div {
+    border-style: solid;
+    border-width: 1px;
+    border-color: transparent;
+    box-shadow: unset;
+    color: #000000;
+}
+
+#surrounding-selection div.selected {
+    border-color: #000000;
+    box-shadow: 0 0 10px 2px #666666;
+    color: #000000;
+}
+
+.warning {
+    color: #DD0000;
+    text-align: center;
+    margin: 100px 50px 0 50px;
+}
