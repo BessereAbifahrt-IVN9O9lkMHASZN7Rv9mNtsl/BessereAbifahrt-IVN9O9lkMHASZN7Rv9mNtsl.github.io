@@ -213,3 +213,9 @@ div.selected {
     box-shadow: 0 0 10px 2px #666666;
     color: #000000;
 }
+
+.warning {
+    color: #DD0000;
+    text-align: center;
+    margin: 100px 50px 0 50px;
+}

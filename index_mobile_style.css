@@ -129,7 +129,7 @@
         background-color: #888888;
         color: #FFFFFF;
     }
-    
+
     #filter-div {
         margin-bottom: 15px;
     }
@@ -165,5 +165,17 @@
 
     #surrounding-selection {
         margin-bottom: 5px;
+    }
+
+    .warning {
+        margin: 50px 20px 0 20px;
+    }
+
+    .warning h1 {
+        font-size: 25px;
+    }
+
+    .warning p {
+        font-size: 12px;
     }
 }

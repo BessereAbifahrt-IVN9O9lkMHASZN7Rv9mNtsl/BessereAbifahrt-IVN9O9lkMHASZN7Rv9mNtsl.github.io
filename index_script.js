@@ -1,17 +1,8 @@
+// Disable Js warning
+document.getElementById("content").classList.remove("hidden");
+document.getElementById("java-script-disabled-warning").classList.add("hidden");
+
 let accommodations = [{
-  "Name": "test1",
-  "SurroundingTags": [
-    "Rot"
-  ],
-  "Country": "Germany",
-  "Region": "Berlin",
-  "AdditionalLocationInformation": "",
-  "SmallImageLink": "https://cf.bstatic.com/xdata/images/hotel/square200/346273890.webp?k=31cfcf34684b3a8e63c1a40afab3fbc4852ebef6fdac2543a61d851696317275&o=&s=1",
-  "MaxPersonCount": 10,
-  "TotalPrice": 1000
-}
-,
-{
   "Name": "Ferienhaus Apfelblüte by Heinke Wohnraum",
   "Description": "Das ist die Beschreibung! Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet. Lorem ipsum dolor sit amet, consetetur sadipscing elitr, sed diam nonumy eirmod tempor invidunt ut labore et dolore magna aliquyam erat, sed diam voluptua. At vero eos et accusam et justo duo dolores et ea rebum. Stet clita kasd gubergren, no sea takimata sanctus est Lorem ipsum dolor sit amet.",
   "SurroundingTags": [
@@ -62,6 +53,19 @@ let accommodations = [{
   "InformationDate": "15.4.2023",
   "BookingComLink": "https://www.booking.com/Share-dWOpjU"
 },
+{
+  "Name": "test1",
+  "SurroundingTags": [
+    "Rot"
+  ],
+  "Country": "Germany",
+  "Region": "Berlin",
+  "AdditionalLocationInformation": "",
+  "SmallImageLink": "https://cf.bstatic.com/xdata/images/hotel/square200/346273890.webp?k=31cfcf34684b3a8e63c1a40afab3fbc4852ebef6fdac2543a61d851696317275&o=&s=1",
+  "MaxPersonCount": 10,
+  "TotalPrice": 1000
+}
+,
 {
   "Name": "test2",
   "SurroundingTags": [
